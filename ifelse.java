@@ -4,17 +4,10 @@ public class ifelse{
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the salary");
         
-        int a = sc.nextInt();
+        int salary = sc.nextInt();
        
-        if(a<500000){
-            System.out.println(a +" Your tax is 0% please earn more");
-        }
-        else if(a>500000 && a<1000000){
-            System.out.println(a +" You have to pay the tax 20% ");
-        }
-        else{
-            System.out.println("Pay 30%");
-        }
+        String result = (salary > 20000) ? "High salary" : "Low salary";
+        System.out.println(result);
     }
 }
 
