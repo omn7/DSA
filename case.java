@@ -4,9 +4,10 @@ public class NumberChecker{
 
        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Number");
-        int a = sc.nextInt();
+         int a = sc.nextInt();
         if(a > 0){
-            System.out.println("The Number is Positive");     
+            System.out.println("The Number is Positive");    
+             
         }
         if(a < 0) {
             System.out.println("The Number is Negative");
@@ -17,3 +18,4 @@ public class NumberChecker{
         
         }
     }
+}
