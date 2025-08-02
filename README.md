@@ -1,5 +1,7 @@
 <div align="center">
 
+![DSA Banner](https://i.pinimg.com/1200x/98/6c/87/986c8728a6577b211a968b1200199158.jpg)
+
 # 🚀 My DSA Learning Journey
 
 > **Personal collection of Data Structures and Algorithms problems I've solved** 💻
@@ -88,7 +90,12 @@
 
 ---
 
+## 🚀 How I Run My Code
 
+### My Setup
+- **IDE**: [Your preferred IDE]
+- **Java Version**: [Your Java version]
+- **OS**: Windows 10
 
 ### My Workflow
 1. **Open the file** in my IDE
