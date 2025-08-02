@@ -13,61 +13,61 @@
 ### 🔍 Searching Algorithms
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **Binary Search** | ✅ Completed | [📄 My Solution](./binarysearch.java) |
-| **Linear Search** | ✅ Completed | [📄 My Solution](./linearsearch.java) |
+| **Binary Search** | ✅ Completed | [📄 My Solution](./dsa/binarysearch.java) |
+| **Linear Search** | ✅ Completed | [📄 My Solution](./dsa/linearsearch.java) |
 
 ### 🔢 Number Systems
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **Binary to Decimal** | ✅ Completed | [📄 My Solution](./bintodec.java) |
-| **Index** | ✅ Completed | [📄 My Solution](./index.java) |
+| **Binary to Decimal** | ✅ Completed | [📄 My Solution](./dsa/bintodec.java) |
+| **Index** | ✅ Completed | [📄 My Solution](./dsa/index.java) |
 
 ### 📊 Array Problems
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **Second Largest Array** | ✅ Completed | [📄 My Solution](./secondlargestarray.java) |
-| **Subarray** | ✅ Completed | [📄 My Solution](./subarray.java) |
-| **Prefix** | ✅ Completed | [📄 My Solution](./prefix.java) |
-| **Kadane's Algorithm** | ✅ Completed | [📄 My Solution](./kadane.java) |
+| **Second Largest Array** | ✅ Completed | [📄 My Solution](./dsa/secondlargestarray.java) |
+| **Subarray** | ✅ Completed | [📄 My Solution](./dsa/subarray.java) |
+| **Prefix** | ✅ Completed | [📄 My Solution](./dsa/prefix.java) |
+| **Kadane's Algorithm** | ✅ Completed | [📄 My Solution](./dsa/kadane.java) |
 
 ### 🎯 Matrix Problems
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **Spiral Matrix 2D** | 🔄 In Progress | [📄 My Solution](./spiralmatrix2d.java) |
+| **Spiral Matrix 2D** | 🔄 In Progress | [📄 My Solution](./dsa/spiralmatrix2d.java) |
 
 ### ✨ Pattern Problems
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **Pattern** | ✅ Completed | [📄 My Solution](./pattern.java) |
-| **Pattern 2** | ✅ Completed | [📄 My Solution](./pattern2.java) |
-| **Pattern 3** | ✅ Completed | [📄 My Solution](./pattern3.java) |
-| **Diamond Pattern** | ✅ Completed | [📄 My Solution](./dimond.java) |
-| **Rombus Pattern** | ✅ Completed | [📄 My Solution](./rombus.java) |
-| **Rombus 1** | ✅ Completed | [📄 My Solution](./rombus1.java) |
+| **Pattern** | ✅ Completed | [📄 My Solution](./dsa/pattern.java) |
+| **Pattern 2** | ✅ Completed | [📄 My Solution](./dsa/pattern2.java) |
+| **Pattern 3** | ✅ Completed | [📄 My Solution](./dsa/pattern3.java) |
+| **Diamond Pattern** | ✅ Completed | [📄 My Solution](./dsa/dimond.java) |
+| **Rombus Pattern** | ✅ Completed | [📄 My Solution](./dsa/rombus.java) |
+| **Rombus 1** | ✅ Completed | [📄 My Solution](./dsa/rombus1.java) |
 
 ### 🔄 Loop Problems
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **For Loop** | ✅ Completed | [📄 My Solution](./forloop.java) |
-| **Loop** | ✅ Completed | [📄 My Solution](./loop.java) |
-| **Loops** | ✅ Completed | [📄 My Solution](./loops.java) |
-| **First Natural Numbers** | ✅ Completed | [📄 My Solution](./firstnatural.java) |
-| **N Div 2** | ✅ Completed | [📄 My Solution](./ndiv2.java) |
+| **For Loop** | ✅ Completed | [📄 My Solution](./dsa/forloop.java) |
+| **Loop** | ✅ Completed | [📄 My Solution](./dsa/loop.java) |
+| **Loops** | ✅ Completed | [📄 My Solution](./dsa/loops.java) |
+| **First Natural Numbers** | ✅ Completed | [📄 My Solution](./dsa/firstnatural.java) |
+| **N Div 2** | ✅ Completed | [📄 My Solution](./dsa/ndiv2.java) |
 
 ### ⚡ Control Flow
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **If Else** | ✅ Completed | [📄 My Solution](./ifelse.java) |
-| **Case** | ✅ Completed | [📄 My Solution](./case.java) |
+| **If Else** | ✅ Completed | [📄 My Solution](./dsa/ifelse.java) |
+| **Case** | ✅ Completed | [📄 My Solution](./dsa/case.java) |
 
 ### 💡 Basic Programming
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **Data Type** | ✅ Completed | [📄 My Solution](./datatype.java) |
-| **Function** | ✅ Completed | [📄 My Solution](./function.java) |
-| **Reverse** | ✅ Completed | [📄 My Solution](./reverse.java) |
-| **Brute Force** | ✅ Completed | [📄 My Solution](./bruteforce.java) |
-| **Prime 1** | ✅ Completed | [📄 My Solution](./prime1.java) |
+| **Data Type** | ✅ Completed | [📄 My Solution](./dsa/datatype.java) |
+| **Function** | ✅ Completed | [📄 My Solution](./dsa/function.java) |
+| **Reverse** | ✅ Completed | [📄 My Solution](./dsa/reverse.java) |
+| **Brute Force** | ✅ Completed | [📄 My Solution](./dsa/bruteforce.java) |
+| **Prime 1** | ✅ Completed | [📄 My Solution](./dsa/prime1.java) |
 
 ---
 
@@ -88,22 +88,19 @@
 
 ---
 
-## 🚀 How I Run My Code
 
-### My Setup
-- **IDE**: [Your preferred IDE]
-- **Java Version**: [Your Java version]
-- **OS**: Windows 10
 
 ### My Workflow
 1. **Open the file** in my IDE
-2. **Compile**: `javac filename.java`
-3. **Run**: `java filename`
-4. **Test** with different inputs
-5. **Document** any new learnings
+2. **Navigate to dsa folder**: `cd dsa`
+3. **Compile**: `javac filename.java`
+4. **Run**: `java filename`
+5. **Test** with different inputs
+6. **Document** any new learnings
 
 ### Example
 ```bash
+cd dsa
 javac spiralmatrix2d.java
 java spiralmatrix2d
 ```
@@ -113,11 +110,13 @@ java spiralmatrix2d
 ## 📁 My File Organization
 
 ```
-My DSA Folder/
-├── 📄 .java files          # My solutions
-├── 📦 .class files         # Compiled code
-├── 📋 README.md            # This progress tracker
-└── 🎯 Each problem has its own file
+My DSA Repository/
+├── 📁 dsa/                    # All Java solutions
+│   ├── 📄 .java files        # My source code
+│   ├── 📦 .class files       # Compiled bytecode
+│   └── 📁 rombus.java/       # Special folder
+├── 📋 README.md              # This progress tracker
+└── 📁 .git/                  # Version control
 ```
 
 ---
