@@ -32,6 +32,11 @@
 | **Prefix** | ✅ Completed | [📄 My Solution](./dsa/prefix.java) |
 | **Kadane's Algorithm** | ✅ Completed | [📄 My Solution](./dsa/kadane.java) |
 
+### 🔄 Sorting Algorithms
+| Problem | Status | Notes |
+|---------|--------|-------|
+| **Bubble Sort (Kth Smallest)** | ✅ Completed | [📄 My Solution](./dsa/bubblesortbykthterm.java) |
+
 ### 🎯 Matrix Problems
 | Problem | Status | Notes |
 |---------|--------|-------|
@@ -80,13 +85,14 @@
 | 🔍 **Searching** | 2/2 | 2 | 100% ✅ |
 | 🔢 **Number Systems** | 2/2 | 2 | 100% ✅ |
 | 📊 **Arrays** | 4/4 | 4 | 100% ✅ |
+| 🔄 **Sorting** | 1/1 | 1 | 100% ✅ |
 | 🎯 **Matrices** | 0/1 | 1 | 0% 🔄 |
 | ✨ **Patterns** | 6/6 | 6 | 100% ✅ |
 | 🔄 **Loops** | 5/5 | 5 | 100% ✅ |
 | ⚡ **Control Flow** | 2/2 | 2 | 100% ✅ |
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
 
-**Overall Progress: 26/27 (96%)** 🎉
+**Overall Progress: 27/28 (96%)** 🎉
 
 ---
 
@@ -133,6 +139,7 @@ My DSA Repository/
 ### ✅ **Completed Topics**
 - **Searching Algorithms**: Binary & Linear Search
 - **Array Manipulation**: Subarrays, Prefix Sums, Kadane's Algorithm
+- **Sorting Algorithms**: Bubble Sort with Kth Smallest Element
 - **Pattern Printing**: Various geometric patterns
 - **Loop Control**: Different loop types and iterations
 - **Control Structures**: If-else, switch cases
