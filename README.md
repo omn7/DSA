@@ -102,7 +102,7 @@
 ### My Setup
 - **IDE**: [Your preferred IDE]
 - **Java Version**: [Your Java version]
-- **OS**: Windows 10
+- **OS**: Windows 11
 
 ### My Workflow
 1. **Open the file** in my IDE
