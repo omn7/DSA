@@ -2,10 +2,10 @@ public class spiralmatrix2d {
     
     public static void main(String[] args) {
         int matrix[][] = {
-            {1,  2,  3,  4},
-            {5,  6,  7,  8},
-            {9, 10, 11, 12},
-            {13,14, 15,16}
+            {10,  20,  30,  40},
+            {15,  25,  35,  40},
+            {27,  29,  37,  48},
+            {32,  33,  39,  50 }
         };
 
         int startRow = 0;
