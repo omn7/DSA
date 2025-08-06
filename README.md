@@ -31,6 +31,7 @@
 | **Subarray** | ✅ Completed | [📄 My Solution](./dsa/subarray.java) |
 | **Prefix** | ✅ Completed | [📄 My Solution](./dsa/prefix.java) |
 | **Kadane's Algorithm** | ✅ Completed | [📄 My Solution](./dsa/kadane.java) |
+| **Find Repeat and Missing Value** | 🔄 In Progress | [📄 My Solution](./dsa/findrepeatandmissingvalue.java) |
 
 ### 🔄 Sorting Algorithms
 | Problem | Status | Notes |
@@ -42,6 +43,7 @@
 |---------|--------|-------|
 | **Diagonal Sum** | ✅ Completed | [📄 My Solution](./dsa/digonalsum.java) |
 | **Spiral Matrix 2D** | 🔄 In Progress | [📄 My Solution](./dsa/spiralmatrix2d.java) |
+| **Staircase Matrix Search** | ✅ Completed | [📄 My Solution](./dsa/staircasematrix.java) |
 
 ### ✨ Pattern Problems
 | Problem | Status | Notes |
@@ -77,6 +79,11 @@
 | **Brute Force** | ✅ Completed | [📄 My Solution](./dsa/bruteforce.java) |
 | **Prime 1** | ✅ Completed | [📄 My Solution](./dsa/prime1.java) |
 
+### 🔤 String Problems
+| Problem | Status | Notes |
+|---------|--------|-------|
+| **Palindrome** | ✅ Completed | [📄 My Solution](./dsa/paladrome.java) |
+
 ---
 
 ## 📊 My Learning Statistics
@@ -85,15 +92,16 @@
 |----------|-----------|-------|----------|
 | 🔍 **Searching** | 2/2 | 2 | 100% ✅ |
 | 🔢 **Number Systems** | 2/2 | 2 | 100% ✅ |
-| 📊 **Arrays** | 4/4 | 4 | 100% ✅ |
+| 📊 **Arrays** | 4/5 | 5 | 80% 🔄 |
 | 🔄 **Sorting** | 1/1 | 1 | 100% ✅ |
-| 🎯 **Matrices** | 1/2 | 2 | 50% 🔄 |
+| 🎯 **Matrices** | 2/3 | 3 | 67% 🔄 |
 | ✨ **Patterns** | 6/6 | 6 | 100% ✅ |
 | 🔄 **Loops** | 5/5 | 5 | 100% ✅ |
 | ⚡ **Control Flow** | 2/2 | 2 | 100% ✅ |
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
+| 🔤 **String Problems** | 1/1 | 1 | 100% ✅ |
 
-**Overall Progress: 28/29 (97%)** 🎉
+**Overall Progress: 30/33 (91%)** 🎉
 
 ---
 
@@ -146,6 +154,7 @@ My DSA Repository/
 - **Control Structures**: If-else, switch cases
 - **Number Systems**: Binary to decimal conversion
 - **Basic Algorithms**: Prime numbers, reverse operations
+- **String Manipulation**: Palindrome checking
 
 ### 🔄 **Currently Learning**
 - **Matrix Traversal**: Spiral order printing
