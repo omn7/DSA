@@ -83,10 +83,8 @@
 | Problem | Status | Notes |
 |---------|--------|-------|
 | **Palindrome** | ✅ Completed | [📄 My Solution](./dsa/paladrome.java) |
-
-### 🧭 Path Finding
-| Problem | Status | Notes |
-|---------|--------|-------|
+| **Convert Letter To Upper Case** | ✅ Completed | [📄 My Solution](./dsa/ConvertLetterToUpperCase.java) |
+| **Largest String Alphabetically** | ✅ Completed | [📄 My Solution](./dsa/LargestStringAlbhabetically.java) |
 | **Shortest Path** | ✅ Completed | [📄 My Solution](./dsa/shortestpath.java) |
 
 ---
@@ -104,10 +102,9 @@
 | 🔄 **Loops** | 5/5 | 5 | 100% ✅ |
 | ⚡ **Control Flow** | 2/2 | 2 | 100% ✅ |
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
-| 🔤 **String Problems** | 1/1 | 1 | 100% ✅ |
-| 🧭 **Path Finding** | 1/1 | 1 | 100% ✅ |
+| 🔤 **String Problems** | 4/4 | 4 | 100% ✅ |
 
-**Overall Progress: 31/34 (91%)** 🎉
+**Overall Progress: 33/34 (97%)** 🎉
 
 ---
 
@@ -160,8 +157,7 @@ My DSA Repository/
 - **Control Structures**: If-else, switch cases
 - **Number Systems**: Binary to decimal conversion
 - **Basic Algorithms**: Prime numbers, reverse operations
-- **String Manipulation**: Palindrome checking
-- **Path Finding**: Shortest distance calculation using coordinate geometry
+- **String Manipulation**: Palindrome checking, First letter capitalization, Lexicographic comparison, Path coordinate processing
 
 ### 🔄 **Currently Learning**
 - **Matrix Traversal**: Spiral order printing

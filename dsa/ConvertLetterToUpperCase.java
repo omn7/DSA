@@ -17,6 +17,7 @@ public class ConvertLetterToUpperCase {
                 }
             } else {
                 upperCaseStr.append(ch);
+
             }
         }
 
