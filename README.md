@@ -84,6 +84,11 @@
 |---------|--------|-------|
 | **Palindrome** | ✅ Completed | [📄 My Solution](./dsa/paladrome.java) |
 
+### 🧭 Path Finding
+| Problem | Status | Notes |
+|---------|--------|-------|
+| **Shortest Path** | ✅ Completed | [📄 My Solution](./dsa/shortestpath.java) |
+
 ---
 
 ## 📊 My Learning Statistics
@@ -100,8 +105,9 @@
 | ⚡ **Control Flow** | 2/2 | 2 | 100% ✅ |
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
 | 🔤 **String Problems** | 1/1 | 1 | 100% ✅ |
+| 🧭 **Path Finding** | 1/1 | 1 | 100% ✅ |
 
-**Overall Progress: 30/33 (91%)** 🎉
+**Overall Progress: 31/34 (91%)** 🎉
 
 ---
 
@@ -155,6 +161,7 @@ My DSA Repository/
 - **Number Systems**: Binary to decimal conversion
 - **Basic Algorithms**: Prime numbers, reverse operations
 - **String Manipulation**: Palindrome checking
+- **Path Finding**: Shortest distance calculation using coordinate geometry
 
 ### 🔄 **Currently Learning**
 - **Matrix Traversal**: Spiral order printing
