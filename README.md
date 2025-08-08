@@ -83,11 +83,9 @@
 | Problem | Status | Notes |
 |---------|--------|-------|
 | **Palindrome** | ✅ Completed | [📄 My Solution](./dsa/paladrome.java) |
-
-### 🧭 Path Finding
-| Problem | Status | Notes |
-|---------|--------|-------|
 | **Shortest Path** | ✅ Completed | [📄 My Solution](./dsa/shortestpath.java) |
+
+
 
 ---
 
