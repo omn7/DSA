@@ -86,7 +86,6 @@
 | **Convert Letter To Upper Case** | ✅ Completed | [📄 My Solution](./dsa/ConvertLetterToUpperCase.java) |
 | **Largest String Alphabetically** | ✅ Completed | [📄 My Solution](./dsa/LargestStringAlbhabetically.java) |
 | **Shortest Path** | ✅ Completed | [📄 My Solution](./dsa/shortestpath.java) |
-| **String Compress Amazon Interview** | ✅ Completed | [📄 My Solution](./dsa/StringCompress.java) |
 
 ---
 
