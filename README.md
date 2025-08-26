@@ -52,9 +52,14 @@
 | **Pattern 2** | ✅ Completed | [📄 My Solution](./dsa/pattern2.java) |
 | **Pattern 3** | ✅ Completed | [📄 My Solution](./dsa/pattern3.java) |
 | **Diamond Pattern** | ✅ Completed | [📄 My Solution](./dsa/dimond.java) |
+| **String Compression** | ✅ Completed | [📄 My Solution](./dsa/StringCompress.java) |
 | **Rombus Pattern** | ✅ Completed | [📄 My Solution](./dsa/rombus.java) |
+| **Merge Sort** | ✅ Completed | [📄 My Solution](./dsa/mergesort.java) |
+| **Move All Negative Elements to End** | ✅ Completed | [📄 My Solution](./dsa/MoveAllNegativeElementsToEnd.java) |
 | **Rombus 1** | ✅ Completed | [📄 My Solution](./dsa/rombus1.java) |
 
+| **Getter and Setter** | ✅ Completed | [📄 My Solution](./dsa/GetterAndSette.java) |
+| **OOPs Concepts** | ✅ Completed | [📄 My Solution](./dsa/oops.java) |
 ### 🔄 Loop Problems
 | Problem | Status | Notes |
 |---------|--------|-------|
@@ -67,10 +72,10 @@
 ### ⚡ Control Flow
 | Problem | Status | Notes |
 |---------|--------|-------|
-| **If Else** | ✅ Completed | [📄 My Solution](./dsa/ifelse.java) |
-| **Case** | ✅ Completed | [📄 My Solution](./dsa/case.java) |
-
-### 💡 Basic Programming
+| 🔤 **String Problems** | 5/5 | 5 | 100% ✅ |
+| 🔄 **Sorting** | 3/3 | 3 | 100% ✅ |
+| 💡 **Basic Programming** | 7/7 | 7 | 100% ✅ |
+**Overall Progress: 38/39 (97%)** 🎉
 | Problem | Status | Notes |
 |---------|--------|-------|
 | **Data Type** | ✅ Completed | [📄 My Solution](./dsa/datatype.java) |
