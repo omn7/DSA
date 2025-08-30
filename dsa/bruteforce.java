@@ -1,4 +1,6 @@
 public class bruteforce {
+
+    // https://drive.google.com/drive/folders/1kEws6dP8QITzN3A_r-H0GFmm1MQvJnEp?usp=sharing
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5};
         int currSum = 0;
