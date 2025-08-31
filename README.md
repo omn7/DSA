@@ -113,7 +113,7 @@
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
 | 🔤 **String Problems** | 4/4 | 4 | 100% ✅ |
 
-**Overall Progress: 35/36 (97%)** 🎉
+**Overall Progress: 33/34 (97%)** 🎉
 
 ---
 
