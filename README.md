@@ -35,6 +35,7 @@
 | **Kadane's Algorithm** | ✅ Completed | [📄 My Solution](./dsa/kadane.java) |
 | **Find Repeat and Missing Value** | 🔄 In Progress | [📄 My Solution](./dsa/findrepeatandmissingvalue.java) |
 | **Trapping Rain Water** | ✅ Completed | [📄 My Solution](./dsa/trappingrainwater.java) |
+| **Buy and Sell Stock** | ✅ Completed | [📄 My Solution](./dsa/BuyAndSellStock.java) |
 
 ### 🔄 Sorting Algorithms
 | Problem | Status | Notes |
@@ -103,7 +104,7 @@
 |----------|-----------|-------|----------|
 | 🔍 **Searching** | 2/2 | 2 | 100% ✅ |
 | 🔢 **Number Systems** | 2/2 | 2 | 100% ✅ |
-| 📊 **Arrays** | 4/5 | 5 | 80% 🔄 |
+| 📊 **Arrays** | 6/7 | 7 | 86% 🔄 |
 | 🔄 **Sorting** | 1/1 | 1 | 100% ✅ |
 | 🎯 **Matrices** | 2/3 | 3 | 67% 🔄 |
 | ✨ **Patterns** | 6/6 | 6 | 100% ✅ |
@@ -112,7 +113,7 @@
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
 | 🔤 **String Problems** | 4/4 | 4 | 100% ✅ |
 
-**Overall Progress: 33/34 (97%)** 🎉
+**Overall Progress: 35/36 (97%)** 🎉
 
 ---
 
