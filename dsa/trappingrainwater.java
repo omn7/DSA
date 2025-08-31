@@ -19,6 +19,6 @@ public class trappingrainwater{
            int waterLevel = Math.min(leftmax[i], rightmax[i]);
             trapwater+= waterLevel-arr[i];
         }
-        System.err.println(trapwater);
+        System.out.println(trapwater);
     }
 }

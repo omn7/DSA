@@ -1,6 +1,8 @@
 <div align="center">
 
 # 🚀 My DSA Learning Journey
+#
+[![GitHub Streak](https://streak-stats.demolab.com?user=omn7&theme=default)](https://git.io/streak-stats)
 
 > **Personal collection of Data Structures and Algorithms problems I've solved** 💻
 
@@ -32,6 +34,7 @@
 | **Prefix** | ✅ Completed | [📄 My Solution](./dsa/prefix.java) |
 | **Kadane's Algorithm** | ✅ Completed | [📄 My Solution](./dsa/kadane.java) |
 | **Find Repeat and Missing Value** | 🔄 In Progress | [📄 My Solution](./dsa/findrepeatandmissingvalue.java) |
+| **Trapping Rain Water** | ✅ Completed | [📄 My Solution](./dsa/trappingrainwater.java) |
 
 ### 🔄 Sorting Algorithms
 | Problem | Status | Notes |
