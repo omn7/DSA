@@ -100,6 +100,12 @@
 | Problem | Status | Notes |
 |---------|--------|-------|
 | **Reverse Array** | ✅ Completed | [📄 My Solution](./dsa/reverseArray.java) |
+| **Recursion Backtracking** | ✅ Completed | [📄 My Solution](./dsa/recursionBacktracking.java) |
+| **Recursion Backtracking N to 1** | ✅ Completed | [📄 My Solution](./dsa/recursionBacktrackingNto1.java) |
+| **Recursion Reverse Number** | ✅ Completed | [📄 My Solution](./dsa/RecursionReverseNum.java) |
+| **Recursion Name** | ✅ Completed | [📄 My Solution](./dsa/recusionName.java) |
+| **Recursion Test** | ✅ Completed | [📄 My Solution](./dsa/recusiont.java) |
+| **Sum of Numbers (Recursion)** | ✅ Completed | [📄 My Solution](./dsa/sumofNumrecu.java) |
 
 ---
 
@@ -117,9 +123,9 @@
 | ⚡ **Control Flow** | 2/2 | 2 | 100% ✅ |
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
 | 🔤 **String Problems** | 4/4 | 4 | 100% ✅ |
-| 🔄 **Recursion** | 1/1 | 1 | 100% ✅ |
+| 🔄 **Recursion** | 7/7 | 7 | 100% ✅ |
 
-**Overall Progress: 34/35 (97%)** 🎉
+**Overall Progress: 40/41 (97%)** 🎉
 
 ---
 
