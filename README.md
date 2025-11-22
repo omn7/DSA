@@ -96,6 +96,11 @@
 | **Largest String Alphabetically** | ✅ Completed | [📄 My Solution](./dsa/LargestStringAlbhabetically.java) |
 | **Shortest Path** | ✅ Completed | [📄 My Solution](./dsa/shortestpath.java) |
 
+### 🔄 Recursion Problems
+| Problem | Status | Notes |
+|---------|--------|-------|
+| **Reverse Array** | ✅ Completed | [📄 My Solution](./dsa/reverseArray.java) |
+
 ---
 
 ## 📊 My Learning Statistics
@@ -112,8 +117,9 @@
 | ⚡ **Control Flow** | 2/2 | 2 | 100% ✅ |
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
 | 🔤 **String Problems** | 4/4 | 4 | 100% ✅ |
+| 🔄 **Recursion** | 1/1 | 1 | 100% ✅ |
 
-**Overall Progress: 33/34 (97%)** 🎉
+**Overall Progress: 34/35 (97%)** 🎉
 
 ---
 
