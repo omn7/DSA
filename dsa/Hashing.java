@@ -6,19 +6,15 @@ public class Hashing {
         Scanner sc = new Scanner(System.in);
 
         // Read size of array
-        System.out.print("Enter size of array: ");
-        int n = sc.nextInt();
-        int[] arr = new int[n];
+       
+        int[] arr = {3,3,4,5,6,3,2};
 
         // Read array elements
-        System.out.println("Enter array elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
+        
 
         // precompute
         int[] hash = new int[13];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < arr.length; i++) {
             hash[arr[i]] += 1;
         }
 
