@@ -8,34 +8,81 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
     <!-- Prism.js for Syntax Highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <style>
         :root {
-            --primary-color: #6366f1;
-            --secondary-color: #4f46e5;
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --secondary-color: #8b5cf6;
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --border-color: #334155;
+            --primary-color: #6366f1;
+            --primary-hover: #818cf8;
         }
         
         body {
             background-color: var(--bg-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3, h4, h5, .navbar-brand, .category-badge {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .navbar {
+            background: rgba(33, 37, 41, 0.95) !important;
+            backdrop-filter: blur(10px);
         }
 
         .hero-section {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #312e81 100%);
             color: white;
-            padding: 4rem 0;
-            margin-bottom: 2rem;
-            border-radius: 0 0 2rem 2rem;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 3rem 3rem;
+            box-shadow: 0 10px 30px -10px rgba(49, 46, 129, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: rotate 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .stats-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border-radius: 1rem;
+            border-radius: 1.5rem;
             padding: 1.5rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: transform 0.3s ease;
@@ -43,62 +90,114 @@
 
         .stats-card:hover {
             transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .category-badge {
             cursor: pointer;
             transition: all 0.3s ease;
             border-radius: 2rem;
-            padding: 0.5rem 1.2rem;
-            margin: 0.25rem;
+            padding: 0.6rem 1.5rem;
+            margin: 0.3rem;
             font-weight: 500;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--text-muted);
+        }
+
+        .category-badge:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
         }
 
         .category-badge.active {
             background-color: var(--primary-color) !important;
             color: white !important;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
         }
 
         .problem-card {
-            border: none;
-            border-radius: 1rem;
-            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            border-radius: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             height: 100%;
             background: var(--card-bg);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            color: var(--text-main);
+        }
+
+        .problem-card h5 {
+            color: var(--text-main);
         }
 
         .problem-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--primary-color);
         }
 
         .status-badge {
-            font-size: 0.75rem;
-            padding: 0.35em 0.8em;
+            font-size: 0.7rem;
+            padding: 0.4em 1em;
+            border-radius: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-weight: 500;
             border-radius: 1rem;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
         }
 
         .code-modal .modal-content {
-            border-radius: 1rem;
+            border-radius: 1.5rem;
             overflow: hidden;
+            border: none;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
         .code-modal .modal-header {
-            background-color: #1e293b;
+            background-color: #0f172a;
             color: white;
-            border-bottom: 1px solid #334155;
+            border-bottom: 1px solid #1e293b;
+            padding: 1.5rem;
         }
 
-        .code-modal .btn-close {
-            filter: invert(1);
+        .code-modal .modal-body {
+            background-color: #0f172a; 
         }
 
         pre {
             margin: 0 !important;
             border-radius: 0 !important;
             max-height: 70vh;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0; /* Start hidden */
         }
 
         /* Custom Scrollbar */
@@ -110,11 +209,38 @@
             background: #f1f1f1; 
         }
         ::-webkit-scrollbar-thumb {
-            background: #c7c7c7; 
+            background: #cbd5e1; 
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #a8a8a8; 
+            background: #94a3b8; 
+        }
+
+        /* Theme Fixes */
+        .text-muted {
+            color: var(--text-muted) !important;
+        }
+
+        .form-control, .input-group-text {
+            background-color: var(--card-bg) !important;
+            color: var(--text-main) !important;
+            border: 1px solid var(--border-color);
+        }
+        
+        .form-control:focus {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+        }
+
+        .form-control::placeholder {
+            color: var(--text-muted);
+        }
+
+        footer {
+            background-color: var(--card-bg) !important;
+            border-color: var(--border-color) !important;
         }
     </style>
 </head>
@@ -126,7 +252,13 @@
             <a class="navbar-brand fw-bold" href="#">
                 <i class="fas fa-code me-2"></i>DSA Journey
             </a>
-            <div class="ms-auto">
+            <div class="ms-auto d-flex align-items-center">
+                <a href="https://omnarkhede.tech" target="_blank" class="text-light me-4 text-decoration-none fw-medium small d-none d-md-block">
+                    Portfolio
+                </a>
+                <button class="btn btn-link text-light me-3 p-0" id="theme-toggle" style="text-decoration: none;">
+                    <i class="fas fa-moon fa-lg"></i>
+                </button>
                 <a href="https://github.com/omn7/DSA" target="_blank" class="btn btn-outline-light btn-sm rounded-pill">
                     <i class="fab fa-github me-2"></i>View on GitHub
                 </a>
@@ -189,9 +321,10 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white py-4 mt-auto border-top">
-        <div class="container text-center text-muted">
-            <p class="mb-0">Built with <i class="fas fa-heart text-danger"></i> by <a href="https://github.com/omn7" class="text-decoration-none fw-bold">omn7</a></p>
+    <footer class="py-5 mt-auto border-top">
+        <div class="container text-center">
+            <p class="mb-2 text-muted">Built with <i class="fas fa-heart text-danger mx-1"></i> and Java</p>
+            <p class="small text-muted opacity-75">&copy; 2025 <a href="https://omnarkhede.tech" target="_blank" class="text-decoration-none text-muted fw-bold">omn7</a>. Open Source.</p>
         </div>
     </footer>
 
@@ -202,6 +335,9 @@
                 <div class="modal-header">
                     <h5 class="modal-title font-monospace" id="modalTitle">Solution.java</h5>
                     <div class="ms-auto">
+                        <button class="btn btn-sm btn-outline-light me-2" onclick="copyCode(this)">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
                         <a id="githubLink" href="#" target="_blank" class="btn btn-sm btn-outline-light me-2">
                             <i class="fas fa-external-link-alt"></i> Open in GitHub
                         </a>
@@ -221,6 +357,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
 
     <script>
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+
+        function setTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Init Theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
         // Data Source
         const problems = [
             // Searching
@@ -313,7 +475,7 @@
             
             // Keep 'All' and append others
             container.innerHTML = categories.map(cat => `
-                <span class="badge bg-white text-dark border category-badge ${cat === 'all' ? 'active' : ''}" 
+                <span class="badge border category-badge ${cat === 'all' ? 'active' : ''}" 
                       onclick="filterProblems('${cat}', this)">
                     ${cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </span>
@@ -323,12 +485,12 @@
         // Render Problems
         function renderProblems(data) {
             const grid = document.getElementById('problems-grid');
-            grid.innerHTML = data.map(problem => `
-                <div class="col-md-6 col-lg-4">
+            grid.innerHTML = data.map((problem, index) => `
+                <div class="col-md-6 col-lg-4 animate-in" style="animation-delay: ${index * 0.05}s">
                     <div class="card problem-card h-100 p-3">
                         <div class="card-body d-flex flex-column">
                             <div class="d-flex justify-content-between align-items-start mb-2">
-                                <span class="badge bg-light text-primary border">${problem.category}</span>
+                                <span class="badge border" style="color: var(--primary-color); background: var(--bg-color);">${problem.category}</span>
                                 <span class="status-badge badge ${problem.status === 'Completed' ? 'bg-success-subtle text-success' : 'bg-warning-subtle text-warning'}">
                                     ${problem.status === 'Completed' ? '<i class="fas fa-check-circle me-1"></i>Done' : '<i class="fas fa-clock me-1"></i>WIP'}
                                 </span>
@@ -391,6 +553,23 @@
             } catch (error) {
                 document.getElementById('codeContent').textContent = '// Error loading code. Please check your internet connection or view on GitHub.';
             }
+        }
+
+        // Copy Code Logic
+        function copyCode(btn) {
+            const code = document.getElementById('codeContent').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.classList.remove('btn-outline-light');
+                btn.classList.add('btn-success');
+                
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.classList.remove('btn-success');
+                    btn.classList.add('btn-outline-light');
+                }, 2000);
+            });
         }
 
         // Update Stats
