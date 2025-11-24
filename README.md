@@ -106,6 +106,15 @@
 | **Recursion Name** | ✅ Completed | [📄 My Solution](./dsa/recusionName.java) |
 | **Recursion Test** | ✅ Completed | [📄 My Solution](./dsa/recusiont.java) |
 | **Sum of Numbers (Recursion)** | ✅ Completed | [📄 My Solution](./dsa/sumofNumrecu.java) |
+| **Recursion Fibonacci** | ✅ Completed | [📄 My Solution](./dsa/RecursionFabonacchi.java) |
+| **Recursion Palindrome** | ✅ Completed | [📄 My Solution](./dsa/RecursionPalandrom.java) |
+
+### 🔑 Hashing Problems
+| Problem | Status | Notes |
+|---------|--------|-------|
+| **Number Hashing** | ✅ Completed | [📄 My Solution](./dsa/Hashing.java) |
+| **Character Hashing** | ✅ Completed | [📄 My Solution](./dsa/HashingChar.java) |
+| **All Character Hashing** | ✅ Completed | [📄 My Solution](./dsa/HashingForAllChar.java) |
 
 ---
 
@@ -123,9 +132,10 @@
 | ⚡ **Control Flow** | 2/2 | 2 | 100% ✅ |
 | 💡 **Basic Programming** | 5/5 | 5 | 100% ✅ |
 | 🔤 **String Problems** | 4/4 | 4 | 100% ✅ |
-| 🔄 **Recursion** | 7/7 | 7 | 100% ✅ |
+| 🔄 **Recursion** | 9/9 | 9 | 100% ✅ |
+| 🔑 **Hashing** | 3/3 | 3 | 100% ✅ |
 
-**Overall Progress: 40/41 (97%)** 🎉
+**Overall Progress: 45/46 (98%)** 🎉
 
 ---
 
@@ -179,6 +189,8 @@ My DSA Repository/
 - **Number Systems**: Binary to decimal conversion
 - **Basic Algorithms**: Prime numbers, reverse operations
 - **String Manipulation**: Palindrome checking, First letter capitalization, Lexicographic comparison, Path coordinate processing
+- **Recursion**: Backtracking, Reverse Array, Fibonacci, Palindrome
+- **Hashing**: Number hashing, Character hashing
 
 ### 🔄 **Currently Learning**
 - **Matrix Traversal**: Spiral order printing
