@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My DSA Learning Journey</title>
+    <meta name="description" content="A comprehensive collection of Data Structures and Algorithms (DSA) problems solved in Java by Om Narkhede. Includes solutions for Arrays, Strings, Recursion, Sorting, and more.">
+    <meta name="keywords" content="DSA, Data Structures, Algorithms, Java, Programming, Coding, Om Narkhede, Portfolio, LeetCode, GeeksforGeeks">
+    <meta name="author" content="Om Narkhede">
+    <meta property="og:title" content="DSA Sheet By Om Narkhede">
+    <meta property="og:description" content="My personal journey mastering Data Structures and Algorithms with Java. Explore solutions and code.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://omn7.github.io/DSA/">
+    
+    <title>DSA Sheet By Om Narkhede</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome -->
@@ -254,7 +262,7 @@
             </a>
             <div class="ms-auto d-flex align-items-center">
                 <a href="https://omnarkhede.tech" target="_blank" class="text-light me-4 text-decoration-none fw-medium small d-none d-md-block">
-                    Portfolio
+                    My Website
                 </a>
                 <button class="btn btn-link text-light me-3 p-0" id="theme-toggle" style="text-decoration: none;">
                     <i class="fas fa-moon fa-lg"></i>
@@ -269,7 +277,7 @@
     <!-- Hero Section -->
     <section class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3">My DSA Learning Journey</h1>
+            <h1 class="display-4 fw-bold mb-3">DSA Sheet By Om Narkhede</h1>
             <p class="lead mb-4 opacity-75">A personal collection of Data Structures and Algorithms problems solved in Java.</p>
             
             <div class="row justify-content-center g-4 mt-2">
@@ -345,6 +353,10 @@
                     </div>
                 </div>
                 <div class="modal-body p-0 bg-dark">
+                    <div class="p-3 border-bottom border-secondary" style="background: rgba(255,255,255,0.05);">
+                        <h6 class="fw-bold" style="color: var(--primary-color);"><i class="fas fa-lightbulb me-2"></i>Concept & Approach</h6>
+                        <p class="small mb-0 text-light opacity-75" id="theoryContent">Loading theory...</p>
+                    </div>
                     <pre><code class="language-java" id="codeContent">// Loading code...</code></pre>
                 </div>
             </div>
@@ -386,79 +398,79 @@
         // Data Source
         const problems = [
             // Searching
-            { title: "Binary Search", category: "Searching", file: "binarysearch.java", status: "Completed" },
-            { title: "Linear Search", category: "Searching", file: "linearsearch.java", status: "Completed" },
+            { title: "Binary Search", category: "Searching", file: "binarysearch.java", status: "Completed", theory: "Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one." },
+            { title: "Linear Search", category: "Searching", file: "linearsearch.java", status: "Completed", theory: "Linear Search is the simplest searching algorithm that checks every element in the list sequentially until the desired element is found or the list ends. Time Complexity: O(n)." },
             
             // Number Systems
-            { title: "Binary to Decimal", category: "Number Systems", file: "bintodec.java", status: "Completed" },
-            { title: "Index", category: "Number Systems", file: "index.java", status: "Completed" },
+            { title: "Binary to Decimal", category: "Number Systems", file: "bintodec.java", status: "Completed", theory: "Converts a binary number (base-2) to a decimal number (base-10) by summing the products of binary digits and their corresponding powers of 2." },
+            { title: "Index", category: "Number Systems", file: "index.java", status: "Completed", theory: "Basic operations involving array indexing and element access." },
 
             // Arrays
-            { title: "Second Largest Array", category: "Arrays", file: "secondlargestarray.java", status: "Completed" },
-            { title: "Subarray", category: "Arrays", file: "subarray.java", status: "Completed" },
-            { title: "Prefix", category: "Arrays", file: "prefix.java", status: "Completed" },
-            { title: "Kadane's Algorithm", category: "Arrays", file: "kadane.java", status: "Completed" },
-            { title: "Find Repeat & Missing", category: "Arrays", file: "findrepeatandmissingvalue.java", status: "In Progress" },
-            { title: "Trapping Rain Water", category: "Arrays", file: "trappingrainwater.java", status: "Completed" },
-            { title: "Buy and Sell Stock", category: "Arrays", file: "BuyAndSellStock.java", status: "Completed" },
-            { title: "Move Negative Elements", category: "Arrays", file: "MoveAllNegativeElementsToEnd.java", status: "Completed" },
+            { title: "Second Largest Array", category: "Arrays", file: "secondlargestarray.java", status: "Completed", theory: "Finds the second largest element in an array. This can be done in a single traversal by maintaining two variables for the largest and second largest values." },
+            { title: "Subarray", category: "Arrays", file: "subarray.java", status: "Completed", theory: "A subarray is a contiguous part of an array. Problems often involve finding subarrays with specific properties, like maximum sum or specific length." },
+            { title: "Prefix", category: "Arrays", file: "prefix.java", status: "Completed", theory: "Prefix Sum involves precomputing an array where the element at index i stores the sum of the original array from index 0 to i. Useful for range sum queries." },
+            { title: "Kadane's Algorithm", category: "Arrays", file: "kadane.java", status: "Completed", theory: "An iterative dynamic programming algorithm to find the maximum sum contiguous subarray within a one-dimensional numeric array. Time Complexity: O(n)." },
+            { title: "Find Repeat & Missing", category: "Arrays", file: "findrepeatandmissingvalue.java", status: "In Progress", theory: "Given an array of size N with elements from 1 to N, find the repeating and missing numbers. Can be solved using frequency arrays, math equations, or XOR." },
+            { title: "Trapping Rain Water", category: "Arrays", file: "trappingrainwater.java", status: "Completed", theory: "Calculates how much rainwater can be trapped between bars. The amount of water at any index is determined by the minimum of the maximum heights to its left and right minus its own height." },
+            { title: "Buy and Sell Stock", category: "Arrays", file: "BuyAndSellStock.java", status: "Completed", theory: "Maximize profit by buying a stock on one day and selling it on a future day. Requires finding the maximum difference between two elements such that the larger element appears after the smaller one." },
+            { title: "Move Negative Elements", category: "Arrays", file: "MoveAllNegativeElementsToEnd.java", status: "Completed", theory: "Rearrange the array elements so that all negative numbers appear on one side (usually the beginning or end) while maintaining the relative order of other elements if required." },
 
             // Sorting
-            { title: "Bubble Sort (Kth Smallest)", category: "Sorting", file: "bubblesortbykthterm.java", status: "Completed" },
-            { title: "Merge Sort", category: "Sorting", file: "mergesort.java", status: "Completed" },
-            { title: "Selection Sort", category: "Sorting", file: "SelectionSort.java", status: "Completed" },
+            { title: "Bubble Sort (Kth Smallest)", category: "Sorting", file: "bubblesortbykthterm.java", status: "Completed", theory: "Bubble Sort repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. Can be modified to find the Kth smallest element." },
+            { title: "Merge Sort", category: "Sorting", file: "mergesort.java", status: "Completed", theory: "A divide-and-conquer algorithm that divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves." },
+            { title: "Selection Sort", category: "Sorting", file: "SelectionSort.java", status: "Completed", theory: "Sorts an array by repeatedly finding the minimum element (considering ascending order) from the unsorted part and putting it at the beginning." },
 
             // Matrix
-            { title: "Diagonal Sum", category: "Matrix", file: "digonalsum.java", status: "Completed" },
-            { title: "Spiral Matrix 2D", category: "Matrix", file: "spiralmatrix2d.java", status: "In Progress" },
-            { title: "Staircase Matrix Search", category: "Matrix", file: "staircasematrix.java", status: "Completed" },
+            { title: "Diagonal Sum", category: "Matrix", file: "digonalsum.java", status: "Completed", theory: "Calculates the sum of elements on the primary (top-left to bottom-right) and secondary (top-right to bottom-left) diagonals of a square matrix." },
+            { title: "Spiral Matrix 2D", category: "Matrix", file: "spiralmatrix2d.java", status: "In Progress", theory: "Traverses a 2D matrix in a spiral order, typically starting from the top-left corner and moving clockwise towards the center." },
+            { title: "Staircase Matrix Search", category: "Matrix", file: "staircasematrix.java", status: "Completed", theory: "Efficiently searches for a target value in a matrix where rows and columns are sorted. Starts from the top-right or bottom-left corner to eliminate rows or columns." },
 
             // Patterns
-            { title: "Pattern", category: "Patterns", file: "pattern.java", status: "Completed" },
-            { title: "Pattern 2", category: "Patterns", file: "pattern2.java", status: "Completed" },
-            { title: "Pattern 3", category: "Patterns", file: "pattern3.java", status: "Completed" },
-            { title: "Diamond Pattern", category: "Patterns", file: "dimond.java", status: "Completed" },
-            { title: "Rombus Pattern", category: "Patterns", file: "rombus.java", status: "Completed" },
-            { title: "Rombus 1", category: "Patterns", file: "rombus1.java", status: "Completed" },
+            { title: "Pattern", category: "Patterns", file: "pattern.java", status: "Completed", theory: "Basic pattern printing using nested loops." },
+            { title: "Pattern 2", category: "Patterns", file: "pattern2.java", status: "Completed", theory: "Intermediate pattern printing involving spaces and stars." },
+            { title: "Pattern 3", category: "Patterns", file: "pattern3.java", status: "Completed", theory: "Complex pattern printing." },
+            { title: "Diamond Pattern", category: "Patterns", file: "dimond.java", status: "Completed", theory: "Prints a diamond shape using stars, requiring careful management of spaces and stars in increasing and decreasing order." },
+            { title: "Rombus Pattern", category: "Patterns", file: "rombus.java", status: "Completed", theory: "Prints a rhombus shape (tilted square) using stars and spaces." },
+            { title: "Rombus 1", category: "Patterns", file: "rombus1.java", status: "Completed", theory: "Variation of the rhombus pattern." },
 
             // Strings
-            { title: "String Compression", category: "Strings", file: "StringCompress.java", status: "Completed" },
-            { title: "Palindrome", category: "Strings", file: "paladrome.java", status: "Completed" },
-            { title: "Convert to Upper Case", category: "Strings", file: "ConvertLetterToUpperCase.java", status: "Completed" },
-            { title: "Largest String Alphabetically", category: "Strings", file: "LargestStringAlbhabetically.java", status: "Completed" },
-            { title: "Shortest Path", category: "Strings", file: "shortestpath.java", status: "Completed" },
+            { title: "String Compression", category: "Strings", file: "StringCompress.java", status: "Completed", theory: "Compresses a string by replacing sequences of the same character with that character followed by the count (e.g., 'aabcccccaaa' becomes 'a2b1c5a3')." },
+            { title: "Palindrome", category: "Strings", file: "paladrome.java", status: "Completed", theory: "Checks if a string reads the same backward as forward. Common approach uses two pointers from start and end." },
+            { title: "Convert to Upper Case", category: "Strings", file: "ConvertLetterToUpperCase.java", status: "Completed", theory: "Converts all lowercase characters in a string to uppercase, often using ASCII values or built-in language methods." },
+            { title: "Largest String Alphabetically", category: "Strings", file: "LargestStringAlbhabetically.java", status: "Completed", theory: "Finds the lexicographically largest string from a set of strings." },
+            { title: "Shortest Path", category: "Strings", file: "shortestpath.java", status: "Completed", theory: "Calculates the shortest path distance from origin (0,0) given a string of directions (N, S, E, W)." },
 
             // Basic / OOP
-            { title: "Getter and Setter", category: "Basic & OOP", file: "GetterAndSette.java", status: "Completed" },
-            { title: "OOPs Concepts", category: "Basic & OOP", file: "oops.java", status: "Completed" },
-            { title: "Data Type", category: "Basic & OOP", file: "datatype.java", status: "Completed" },
-            { title: "Function", category: "Basic & OOP", file: "function.java", status: "Completed" },
-            { title: "Reverse", category: "Basic & OOP", file: "reverse.java", status: "Completed" },
-            { title: "Brute Force", category: "Basic & OOP", file: "bruteforce.java", status: "Completed" },
-            { title: "Prime 1", category: "Basic & OOP", file: "prime1.java", status: "Completed" },
+            { title: "Getter and Setter", category: "Basic & OOP", file: "GetterAndSette.java", status: "Completed", theory: "Demonstrates Encapsulation in Java using private variables and public getter/setter methods to access and modify them." },
+            { title: "OOPs Concepts", category: "Basic & OOP", file: "oops.java", status: "Completed", theory: "Overview of Object-Oriented Programming concepts: Inheritance, Polymorphism, Abstraction, and Encapsulation." },
+            { title: "Data Type", category: "Basic & OOP", file: "datatype.java", status: "Completed", theory: "Introduction to primitive (int, char, boolean, etc.) and non-primitive data types in Java." },
+            { title: "Function", category: "Basic & OOP", file: "function.java", status: "Completed", theory: "Basics of defining and calling functions (methods) in Java, including parameters and return types." },
+            { title: "Reverse", category: "Basic & OOP", file: "reverse.java", status: "Completed", theory: "Basic algorithm to reverse a number or a string." },
+            { title: "Brute Force", category: "Basic & OOP", file: "bruteforce.java", status: "Completed", theory: "Solving a problem by trying every possible solution. Simple to implement but often inefficient." },
+            { title: "Prime 1", category: "Basic & OOP", file: "prime1.java", status: "Completed", theory: "Checks if a number is prime (divisible only by 1 and itself). Optimization involves checking divisors up to the square root of the number." },
 
             // Loops
-            { title: "For Loop", category: "Loops", file: "forloop.java", status: "Completed" },
-            { title: "Loop", category: "Loops", file: "loop.java", status: "Completed" },
-            { title: "Loops", category: "Loops", file: "loops.java", status: "Completed" },
-            { title: "First Natural Numbers", category: "Loops", file: "firstnatural.java", status: "Completed" },
-            { title: "N Div 2", category: "Loops", file: "ndiv2.java", status: "Completed" },
+            { title: "For Loop", category: "Loops", file: "forloop.java", status: "Completed", theory: "Demonstration of the 'for' loop structure for iterating a specific number of times." },
+            { title: "Loop", category: "Loops", file: "loop.java", status: "Completed", theory: "General loop concepts." },
+            { title: "Loops", category: "Loops", file: "loops.java", status: "Completed", theory: "Advanced loop usage." },
+            { title: "First Natural Numbers", category: "Loops", file: "firstnatural.java", status: "Completed", theory: "Prints the first N natural numbers using loops." },
+            { title: "N Div 2", category: "Loops", file: "ndiv2.java", status: "Completed", theory: "Looping logic involving division." },
 
             // Recursion
-            { title: "Reverse Array", category: "Recursion", file: "reverseArray.java", status: "Completed" },
-            { title: "Backtracking", category: "Recursion", file: "recursionBacktracking.java", status: "Completed" },
-            { title: "Backtracking N to 1", category: "Recursion", file: "recursionBacktrackingNto1.java", status: "Completed" },
-            { title: "Reverse Number", category: "Recursion", file: "RecursionReverseNum.java", status: "Completed" },
-            { title: "Recursion Name", category: "Recursion", file: "recusionName.java", status: "Completed" },
-            { title: "Recursion Test", category: "Recursion", file: "recusiont.java", status: "Completed" },
-            { title: "Sum of Numbers", category: "Recursion", file: "sumofNumrecu.java", status: "Completed" },
-            { title: "Fibonacci", category: "Recursion", file: "RecursionFabonacchi.java", status: "Completed" },
-            { title: "Palindrome (Recursion)", category: "Recursion", file: "RecursionPalandrom.java", status: "Completed" },
+            { title: "Reverse Array", category: "Recursion", file: "reverseArray.java", status: "Completed", theory: "Reverses an array using recursion by swapping the first and last elements and making a recursive call for the inner subarray." },
+            { title: "Backtracking", category: "Recursion", file: "recursionBacktracking.java", status: "Completed", theory: "Algorithmic-technique for solving problems recursively by trying to build a solution incrementally and abandoning it ('backtracking') if it fails." },
+            { title: "Backtracking N to 1", category: "Recursion", file: "recursionBacktrackingNto1.java", status: "Completed", theory: "Prints numbers from N to 1 using backtracking logic." },
+            { title: "Reverse Number", category: "Recursion", file: "RecursionReverseNum.java", status: "Completed", theory: "Reverses the digits of a number using recursion." },
+            { title: "Recursion Name", category: "Recursion", file: "recusionName.java", status: "Completed", theory: "Basic recursion example." },
+            { title: "Recursion Test", category: "Recursion", file: "recusiont.java", status: "Completed", theory: "Recursion practice." },
+            { title: "Sum of Numbers", category: "Recursion", file: "sumofNumrecu.java", status: "Completed", theory: "Calculates the sum of first N natural numbers using recursion: Sum(n) = n + Sum(n-1)." },
+            { title: "Fibonacci", category: "Recursion", file: "RecursionFabonacchi.java", status: "Completed", theory: "Calculates the Nth Fibonacci number where F(n) = F(n-1) + F(n-2)." },
+            { title: "Palindrome (Recursion)", category: "Recursion", file: "RecursionPalandrom.java", status: "Completed", theory: "Checks if a string is a palindrome using recursion by comparing the first and last characters and recurring for the substring." },
 
             // Hashing
-            { title: "Number Hashing", category: "Hashing", file: "Hashing.java", status: "Completed" },
-            { title: "Character Hashing", category: "Hashing", file: "HashingChar.java", status: "Completed" },
-            { title: "All Character Hashing", category: "Hashing", file: "HashingForAllChar.java", status: "Completed" }
+            { title: "Number Hashing", category: "Hashing", file: "Hashing.java", status: "Completed", theory: "Using a frequency array or HashMap to count occurrences of numbers in an array." },
+            { title: "Character Hashing", category: "Hashing", file: "HashingChar.java", status: "Completed", theory: "Using an array (size 26 or 256) to count occurrences of characters in a string." },
+            { title: "All Character Hashing", category: "Hashing", file: "HashingForAllChar.java", status: "Completed", theory: "Hashing technique to handle all ASCII characters." }
         ];
 
         // Initialization
@@ -538,6 +550,12 @@
             document.getElementById('codeContent').textContent = '// Fetching code from GitHub...';
             document.getElementById('githubLink').href = `https://github.com/omn7/DSA/blob/main/dsa/${filename}`;
             
+            // Set Theory
+            const problem = problems.find(p => p.file === filename);
+            document.getElementById('theoryContent').textContent = problem && problem.theory 
+                ? problem.theory 
+                : "Detailed theory for this problem is coming soon.";
+
             modal.show();
 
             try {
