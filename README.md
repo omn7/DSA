@@ -40,7 +40,9 @@
 ### 🔄 Sorting Algorithms
 | Problem | Status | Notes |
 |---------|--------|-------|
+| **Bubble Sort** | ✅ Completed | [📄 My Solution](./dsa/BubbleSort.java) |
 | **Bubble Sort (Kth Smallest)** | ✅ Completed | [📄 My Solution](./dsa/bubblesortbykthterm.java) |
+| **Insertion Sort** | ✅ Completed | [📄 My Solution](./dsa/insertionSort.java) |
 
 ### 🎯 Matrix Problems
 | Problem | Status | Notes |
@@ -125,7 +127,7 @@
 | 🔍 **Searching** | 2/2 | 2 | 100% ✅ |
 | 🔢 **Number Systems** | 2/2 | 2 | 100% ✅ |
 | 📊 **Arrays** | 6/7 | 7 | 86% 🔄 |
-| 🔄 **Sorting** | 1/1 | 1 | 100% ✅ |
+| 🔄 **Sorting** | 3/3 | 3 | 100% ✅ |
 | 🎯 **Matrices** | 2/3 | 3 | 67% 🔄 |
 | ✨ **Patterns** | 6/6 | 6 | 100% ✅ |
 | 🔄 **Loops** | 5/5 | 5 | 100% ✅ |
@@ -135,7 +137,7 @@
 | 🔄 **Recursion** | 9/9 | 9 | 100% ✅ |
 | 🔑 **Hashing** | 3/3 | 3 | 100% ✅ |
 
-**Overall Progress: 45/46 (98%)** 🎉
+**Overall Progress: 47/48 (98%)** 🎉
 
 ---
 
