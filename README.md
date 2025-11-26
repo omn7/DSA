@@ -43,6 +43,8 @@
 | **Bubble Sort** | ✅ Completed | [📄 My Solution](./dsa/BubbleSort.java) |
 | **Bubble Sort (Kth Smallest)** | ✅ Completed | [📄 My Solution](./dsa/bubblesortbykthterm.java) |
 | **Insertion Sort** | ✅ Completed | [📄 My Solution](./dsa/insertionSort.java) |
+| **Merge Sort** | ✅ Completed | [📄 My Solution](./dsa/MergeSort.java) |
+| **Selection Sort** | ✅ Completed | [📄 My Solution](./dsa/SelectionSort.java) |
 
 ### 🎯 Matrix Problems
 | Problem | Status | Notes |
@@ -60,7 +62,6 @@
 | **Diamond Pattern** | ✅ Completed | [📄 My Solution](./dsa/dimond.java) |
 | **String Compression** | ✅ Completed | [📄 My Solution](./dsa/StringCompress.java) |
 | **Rombus Pattern** | ✅ Completed | [📄 My Solution](./dsa/rombus.java) |
-| **Merge Sort** | ✅ Completed | [📄 My Solution](./dsa/mergesort.java) |
 | **Move All Negative Elements to End** | ✅ Completed | [📄 My Solution](./dsa/MoveAllNegativeElementsToEnd.java) |
 | **Rombus 1** | ✅ Completed | [📄 My Solution](./dsa/rombus1.java) |
 
@@ -79,7 +80,7 @@
 | Problem | Status | Notes |
 |---------|--------|-------|
 | 🔤 **String Problems** | 5/5 | 5 | 100% ✅ |
-| 🔄 **Sorting** | 3/3 | 3 | 100% ✅ |
+| 🔄 **Sorting** | 5/5 | 5 | 100% ✅ |
 | 💡 **Basic Programming** | 7/7 | 7 | 100% ✅ |
 **Overall Progress: 38/39 (97%)** 🎉
 | Problem | Status | Notes |
@@ -127,7 +128,7 @@
 | 🔍 **Searching** | 2/2 | 2 | 100% ✅ |
 | 🔢 **Number Systems** | 2/2 | 2 | 100% ✅ |
 | 📊 **Arrays** | 6/7 | 7 | 86% 🔄 |
-| 🔄 **Sorting** | 3/3 | 3 | 100% ✅ |
+| 🔄 **Sorting** | 5/5 | 5 | 100% ✅ |
 | 🎯 **Matrices** | 2/3 | 3 | 67% 🔄 |
 | ✨ **Patterns** | 6/6 | 6 | 100% ✅ |
 | 🔄 **Loops** | 5/5 | 5 | 100% ✅ |
@@ -137,7 +138,7 @@
 | 🔄 **Recursion** | 9/9 | 9 | 100% ✅ |
 | 🔑 **Hashing** | 3/3 | 3 | 100% ✅ |
 
-**Overall Progress: 47/48 (98%)** 🎉
+**Overall Progress: 48/49 (98%)** 🎉
 
 ---
 
