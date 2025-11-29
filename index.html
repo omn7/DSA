@@ -359,6 +359,9 @@
                     <div class="p-3 border-bottom border-secondary" style="background: rgba(255,255,255,0.05);">
                         <h6 class="fw-bold" style="color: var(--primary-color);"><i class="fas fa-lightbulb me-2"></i>Concept & Approach</h6>
                         <p class="small mb-0 text-light opacity-75" id="theoryContent">Loading theory...</p>
+                        <div id="imageContainer" class="mt-3 d-none">
+                            <img id="problemImage" src="" alt="Problem Explanation" class="img-fluid rounded border border-secondary">
+                        </div>
                     </div>
                     <pre><code class="language-java" id="codeContent">// Loading code...</code></pre>
                 </div>
@@ -476,7 +479,8 @@
             // Hashing
             { title: "Number Hashing", category: "Hashing", file: "Hashing.java", status: "Completed", theory: "Using a frequency array or HashMap to count occurrences of numbers in an array." },
             { title: "Character Hashing", category: "Hashing", file: "HashingChar.java", status: "Completed", theory: "Using an array (size 26 or 256) to count occurrences of characters in a string." },
-            { title: "All Character Hashing", category: "Hashing", file: "HashingForAllChar.java", status: "Completed", theory: "Hashing technique to handle all ASCII characters." }
+            { title: "All Character Hashing", category: "Hashing", file: "HashingForAllChar.java", status: "Completed", theory: "Hashing technique to handle all ASCII characters." },
+            { title: "Remove Duplicates (HashMap)", category: "Hashing", file: "removeDuplicatesUsingHashMap.java", status: "Completed", theory: "Removes duplicate elements from an array using a HashSet to track unique elements encountered so far.", image: "dsa/DryRun/removeDublicatesUsingHashset.png" }
         ];
 
         // Initialization
@@ -561,6 +565,17 @@
             document.getElementById('theoryContent').textContent = problem && problem.theory 
                 ? problem.theory 
                 : "Detailed theory for this problem is coming soon.";
+
+            // Set Image
+            const imgContainer = document.getElementById('imageContainer');
+            const imgElement = document.getElementById('problemImage');
+            
+            if (problem && problem.image) {
+                imgElement.src = problem.image;
+                imgContainer.classList.remove('d-none');
+            } else {
+                imgContainer.classList.add('d-none');
+            }
 
             modal.show();
 
