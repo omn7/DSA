@@ -6,7 +6,7 @@ class Vehicle {
 }
 
 // Child class extending Vehicle (Single Inheritance)
-class SingleInheratence extends Vehicle {
+public class SingleInheratence extends Vehicle {
     
     SingleInheratence() {
         System.out.println("This is my car");
