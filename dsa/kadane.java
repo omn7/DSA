@@ -7,7 +7,7 @@ class kadane {
     }
 }
 
-class Solution {
+class Solution { 
     public int maxSubArray(int[] nums) {
         int sum = 0; 
         int maxi = nums[0];
