@@ -352,6 +352,101 @@
             border: 1px solid var(--border-color);
             border-radius: 0.5rem;
         }
+
+        /* Card Cracking Animation */
+        @keyframes crackOpen {
+            0% { transform: perspective(1000px) rotateY(0); opacity: 1; }
+            50% { transform: perspective(1000px) rotateY(-15deg); opacity: 0.8; }
+            100% { transform: perspective(1000px) rotateY(-90deg) scale(0.9); opacity: 0; }
+        }
+
+        .card-crack {
+            transform-origin: left center;
+            animation: crackOpen 0.5s ease-in forwards;
+            pointer-events: none; /* Prevent double clicks */
+        }
+
+        /* Simple Toggle Switch */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        
+        .theme-switch {
+            display: inline-block;
+            height: 26px;
+            position: relative;
+            width: 50px;
+            margin-bottom: 0;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        .slider {
+            background-color: #cbd5e1;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+            border-radius: 34px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .slider:before {
+            background-color: #fff;
+            bottom: 3px;
+            content: "";
+            height: 20px;
+            left: 3px;
+            position: absolute;
+            transition: .4s;
+            width: 20px;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        input:checked + .slider {
+            background-color: #4f46e5;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+
+        .slider-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            transition: opacity 0.3s;
+        }
+
+        .slider-icon.sun {
+            left: 7px;
+            color: #f59e0b;
+            opacity: 1;
+        }
+
+        .slider-icon.moon {
+            right: 7px;
+            color: #fbbf24;
+            opacity: 0;
+        }
+
+        input:checked + .slider .slider-icon.sun {
+            opacity: 0;
+        }
+
+        input:checked + .slider .slider-icon.moon {
+            opacity: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -374,9 +469,15 @@
                         <i class="fas fa-search"></i>
                     </button>
                     <div class="vr d-none d-md-block mx-2 opacity-25"></div>
-                    <button class="btn btn-link text-decoration-none p-0 btn-link-custom" id="theme-toggle">
-                        <i class="fas fa-moon fa-lg"></i>
-                    </button>
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="theme-toggle">
+                            <input type="checkbox" id="theme-toggle" />
+                            <div class="slider">
+                                <i class="fas fa-sun slider-icon sun"></i>
+                                <i class="fas fa-moon slider-icon moon"></i>
+                            </div>
+                        </label>
+                    </div>
                     <a href="https://github.com/omn7/DSA" target="_blank" class="btn btn-primary btn-sm rounded-pill px-3 shadow-sm">
                         <i class="fab fa-github me-2"></i>GitHub
                     </a>
@@ -570,18 +671,11 @@
         // Theme Toggle Logic
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
-        const icon = themeToggle.querySelector('i');
 
         function setTheme(theme) {
             html.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            if (theme === 'dark') {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
+            // Animation is handled via CSS on [data-theme]
         }
 
         themeToggle.addEventListener('click', () => {
@@ -592,6 +686,9 @@
         // Init Theme
         const savedTheme = localStorage.getItem('theme') || 'light';
         setTheme(savedTheme);
+        if (savedTheme === 'dark') {
+            document.getElementById('theme-toggle').checked = true;
+        }
 
         // Data Source
         const problems = [
@@ -744,7 +841,7 @@
                             </p>
 
                             <div class="mt-4 pt-3 border-top" style="border-color: var(--border-color) !important;">
-                                <button class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm" onclick="viewCode('${problem.file}', '${problem.title}')">
+                                <button class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm" onclick="viewCode('${problem.file}', '${problem.title}', this)">
                                     View Solution <i class="fas fa-arrow-right ms-2 small"></i>
                                 </button>
                             </div>
@@ -779,7 +876,22 @@
         });
 
         // View Code Logic
-        async function viewCode(filename, title) {
+        async function viewCode(filename, title, btnButton) {
+            // Animation logic
+            if(btnButton) {
+                const card = btnButton.closest('.problem-card');
+                if(card) {
+                    card.classList.add('card-crack');
+                    // Reset after animation (optional, if user closes modal and sees card again)
+                    setTimeout(() => {
+                        card.classList.remove('card-crack');
+                    }, 500); // Same as animation duration
+                }
+            }
+
+            // Slight delay to let animation start
+            await new Promise(r => setTimeout(r, 200));
+
             const modal = new bootstrap.Modal(document.getElementById('codeModal'));
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('problemTitleLeft').textContent = title; 
