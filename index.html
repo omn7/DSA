@@ -20,7 +20,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- Prism.js for Syntax Highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <style>
@@ -36,11 +36,11 @@
         }
 
         [data-theme="dark"] {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #cbd5e1;
-            --border-color: #334155;
+            --bg-color: #000000;
+            --card-bg: #0a0a0a;
+            --text-main: #ffffff;
+            --text-muted: #a3a3a3;
+            --border-color: #262626;
             --primary-color: #6366f1;
             --primary-hover: #818cf8;
         }
@@ -54,23 +54,36 @@
         }
 
         h1, h2, h3, h4, h5, .navbar-brand, .category-badge {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em; /* Tighter tracking for modern look */
         }
 
         .navbar {
-            background: rgba(33, 37, 41, 0.95) !important;
+            background-color: var(--card-bg) !important;
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar-brand, .nav-link, .btn-link-custom {
+            color: var(--text-main) !important;
         }
 
         .hero-section {
-            background: linear-gradient(135deg, #0f172a 0%, #312e81 100%);
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
             color: white;
-            padding: 5rem 0;
-            margin-bottom: 3rem;
-            border-radius: 0 0 3rem 3rem;
-            box-shadow: 0 10px 30px -10px rgba(49, 46, 129, 0.4);
+            padding: 6rem 0 5rem;
+            margin-bottom: 4rem;
+            border-radius: 0 0 4rem 4rem;
+            box-shadow: 0 20px 40px -10px rgba(49, 46, 129, 0.4);
             position: relative;
             overflow: hidden;
+        }
+
+        [data-theme="dark"] .hero-section {
+            background: #000000;
+            background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #000000 70%);
+            box-shadow: none;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .hero-section::before {
@@ -106,49 +119,61 @@
 
         .category-badge {
             cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 2rem;
-            padding: 0.6rem 1.5rem;
-            margin: 0.3rem;
+            transition: all 0.2s ease;
+            border-radius: 50rem;
+            padding: 0.5rem 1.25rem;
+            margin: 0.25rem;
             font-weight: 500;
+            font-size: 0.9rem;
             border: 1px solid var(--border-color);
             background: var(--card-bg);
             color: var(--text-muted);
         }
 
         .category-badge:hover {
-            transform: translateY(-2px);
+            transform: translateY(-1px);
             border-color: var(--primary-color);
             color: var(--primary-color);
+            background-color: var(--bg-color);
         }
 
         .category-badge.active {
             background-color: var(--primary-color) !important;
             color: white !important;
             border-color: var(--primary-color);
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
         }
 
         .problem-card {
             border: 1px solid var(--border-color);
-            border-radius: 1.5rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 1.25rem;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             height: 100%;
             background: var(--card-bg);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); */
             overflow: hidden;
-            color: var(--text-main);
-        }
-
-        .problem-card h5 {
-            color: var(--text-main);
+            position: relative;
         }
 
         .problem-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
             border-color: var(--primary-color);
         }
+
+        .search-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50rem; /* Pill shape */
+            transition: all 0.3s;
+        }
+        
+        .search-container:focus-within {
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+            border-color: var(--primary-color);
+            transform: translateY(-1px);
+        }
+
 
         .status-badge {
             font-size: 0.7rem;
@@ -175,30 +200,76 @@
         }
 
         .code-modal .modal-content {
-            border-radius: 1.5rem;
+            border-radius: 1rem;
             overflow: hidden;
             border: none;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            height: 85vh; /* Fixed height for split view */
         }
-
-        .code-modal .modal-header {
-            background-color: #0f172a;
-            color: white;
-            border-bottom: 1px solid #1e293b;
-            padding: 1.5rem;
-        }
-
+        
         .code-modal .modal-body {
-            background-color: #0f172a; 
+            padding: 0;
+            overflow: hidden; /* Handle scrolling in children */
+        }
+        
+        .split-view-container {
+            display: flex;
+            height: 100%;
+        }
+        
+        .left-pane {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            border-right: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-main);
+        }
+        
+        .right-pane {
+            flex: 1.2; /* Code side slightly wider */
+            display: flex;
+            flex-direction: column;
+            background-color: #1e1e1e; /* VS Code dark bg */
+            overflow: hidden;
+        }
+
+        .code-header {
+            padding: 0.75rem 1rem;
+            background-color: #252526;
+            border-bottom: 1px solid #3e3e42;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .code-editor-area {
+            flex: 1;
+            overflow: auto;
+            padding: 0;
+            position: relative;
         }
 
         pre {
             margin: 0 !important;
             border-radius: 0 !important;
-            max-height: 70vh;
+            min-height: 100%;
             font-family: 'Fira Code', monospace;
             font-size: 0.9rem;
+            background-color: transparent !important;
         }
+
+        /* Specific scrollbar for the dark code area */
+        .right-pane ::-webkit-scrollbar-track {
+            background: #1e1e1e; 
+        }
+        .right-pane ::-webkit-scrollbar-thumb {
+            background: #424242; 
+        }
+        .right-pane ::-webkit-scrollbar-thumb:hover {
+            background: #4f4f4f; 
+        }
+
 
         /* Animation */
         @keyframes fadeInUp {
@@ -249,30 +320,67 @@
             color: var(--text-muted);
         }
 
+        [data-theme="dark"] .card-title, 
+        [data-theme="dark"] h5.card-title {
+            color: #ffffff !important;
+        }
+
         footer {
             background-color: var(--card-bg) !important;
             border-color: var(--border-color) !important;
+        }
+
+        /* Dark Mode Global Headings */
+        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, 
+        [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
+            color: #ffffff !important;
+        }
+
+        /* Modal & UI Tweaks for Dark Mode */
+        .modal-header {
+            background-color: var(--card-bg) !important;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color) !important;
+        }
+
+        [data-theme="dark"] .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+
+        .description-box {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
         }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-2">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="fas fa-code me-2"></i>DSA Journey
+            <a class="navbar-brand fw-bold fs-5 d-flex align-items-center" href="#">
+                <span class="rounded bg-primary text-white d-flex align-items-center justify-content-center me-2 shadow-sm" style="width: 32px; height: 32px; font-size: 0.9rem;">
+                    <i class="fas fa-code"></i>
+                </span>
+                DSA Journey
             </a>
-            <div class="ms-auto d-flex align-items-center">
-                <a href="https://omnarkhede.tech" target="_blank" class="text-light me-4 text-decoration-none fw-medium small d-none d-md-block">
-                    My Website
-                </a>
-                <button class="btn btn-link text-light me-3 p-0" id="theme-toggle" style="text-decoration: none;">
-                    <i class="fas fa-moon fa-lg"></i>
-                </button>
-                <a href="https://github.com/omn7/DSA" target="_blank" class="btn btn-outline-light btn-sm rounded-pill">
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="ms-auto d-flex align-items-center gap-3">
+                    <button class="btn btn-link text-decoration-none p-0 btn-link-custom me-2" onclick="document.getElementById('search-input').focus(); window.scrollTo({top: document.getElementById('search-input').getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth'});">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="vr d-none d-md-block mx-2 opacity-25"></div>
+                    <button class="btn btn-link text-decoration-none p-0 btn-link-custom" id="theme-toggle">
+                        <i class="fas fa-moon fa-lg"></i>
+                    </button>
+                    <a href="https://github.com/omn7/DSA" target="_blank" class="btn btn-primary btn-sm rounded-pill px-3 shadow-sm">
+                        <i class="fab fa-github me-2"></i>GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -293,12 +401,12 @@
                         A curated collection of Data Structures and Algorithms solutions in Java. 
                         Focusing on clean code, optimization, and deep understanding.
                     </p>
-                    <div class="d-flex gap-3">
-                        <a href="#problems-grid" class="btn btn-light px-4 py-2 rounded-pill fw-bold text-primary border-0 shadow-sm">
-                            <i class="fas fa-play me-2"></i>Explore Problems
+                    <div class="d-flex gap-3 text-start">
+                        <a href="https://omnarkhede.tech" target="_blank" class="btn btn-light px-4 py-2 rounded-pill fw-bold text-primary border-0 shadow-sm">
+                            <i class="fas fa-user-circle me-2"></i>Portfolio
                         </a>
-                        <a href="https://github.com/omn7/DSA" target="_blank" class="btn btn-outline-light px-4 py-2 rounded-pill">
-                            <i class="fab fa-github me-2"></i>GitHub Repo
+                        <a href="#problems-grid" class="btn btn-outline-light px-4 py-2 rounded-pill">
+                             Explore
                         </a>
                     </div>
                 </div>
@@ -361,9 +469,9 @@
         <!-- Search -->
         <div class="row justify-content-center mb-5">
             <div class="col-md-6">
-                <div class="input-group shadow-sm rounded-pill overflow-hidden">
-                    <span class="input-group-text border-0 bg-white ps-4"><i class="fas fa-search text-muted"></i></span>
-                    <input type="text" class="form-control border-0 py-3" id="search-input" placeholder="Search for a problem...">
+                <div class="search-container p-1 d-flex shadow-sm">
+                    <span class="input-group-text border-0 bg-transparent ps-3 text-muted"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control border-0 bg-transparent shadow-none" id="search-input" placeholder="Search for a problem or algorithm..." style="font-size: 1rem;">
                 </div>
             </div>
         </div>
@@ -382,38 +490,78 @@
         </div>
     </footer>
 
-    <!-- Code Modal -->
+    <!-- Code Modal (Split View) -->
     <div class="modal fade code-modal" id="codeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title font-monospace" id="modalTitle">Solution.java</h5>
-                    <div class="ms-auto">
-                        <button class="btn btn-sm btn-outline-light me-2" onclick="copyCode(this)">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                        <a id="githubLink" href="#" target="_blank" class="btn btn-sm btn-outline-light me-2">
-                            <i class="fas fa-external-link-alt"></i> Open in GitHub
-                        </a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
+                <div class="modal-header border-bottom p-3 d-flex align-items-center">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Problem Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-0 bg-dark">
-                    <div class="p-3 border-bottom border-secondary" style="background: rgba(255,255,255,0.05);">
-                        <h6 class="fw-bold" style="color: var(--primary-color);"><i class="fas fa-lightbulb me-2"></i>Concept & Approach</h6>
-                        <p class="small mb-0 text-light opacity-75" id="theoryContent">Loading theory...</p>
-                        <p id="questionContent" class="small mb-2 text-light opacity-85 d-none"></p>
-                        <div id="imageContainer" class="mt-3 d-none">
-                            <img id="problemImage" src="" alt="Problem Explanation" class="img-fluid rounded border border-secondary">
+                <div class="modal-body">
+                    <div class="split-view-container">
+                        <!-- Left Pane: Problem Description -->
+                        <div class="left-pane">
+                            <div class="mb-4">
+                                <span class="badge bg-primary bg-opacity-10 text-primary mb-2" id="problemCategory">Category</span>
+                                <h4 class="fw-bold mb-3" id="problemTitleLeft">Problem Title</h4>
+                                
+                                <div class="description-box p-3 mb-4">
+                                    <h6 class="fw-bold mb-2"><i class="fas fa-book-open me-2 text-primary"></i>Description</h6>
+                                    <p class="text-muted small mb-0" id="theoryContent">
+                                        Loading theory...
+                                    </p>
+                                </div>
+
+                                <div id="questionContainer" class="mb-4 d-none">
+                                    <h6 class="fw-bold mb-2"><i class="fas fa-question-circle me-2 text-warning"></i>Problem Statement</h6>
+                                    <p id="questionContent" class="text-muted small"></p>
+                                </div>
+
+                                <div id="imageContainer" class="d-none mt-3">
+                                    <img id="problemImage" src="" alt="Explanation" class="img-fluid rounded shadow-sm border">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Pane: Code Editor -->
+                        <div class="right-pane">
+                            <div class="code-header">
+                                <div class="d-flex align-items-center">
+                                    <i class="fab fa-java text-warning me-2 fs-5"></i>
+                                    <span class="text-light small font-monospace" id="fileNameDisplay">Solution.java</span>
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-dark border border-secondary text-secondary me-2" onclick="copyCode(this)">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                    <a id="githubLink" href="#" target="_blank" class="btn btn-sm btn-dark border border-secondary text-secondary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="code-editor-area">
+                                <pre><code class="language-java" id="codeContent">// Loading...</code></pre>
+                            </div>
                         </div>
                     </div>
-                    <pre><code class="language-java" id="codeContent">// Loading code...</code></pre>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Scripts -->
+    <footer class="py-5 mt-auto" style="background-color: var(--bg-color); border-top: 1px solid var(--border-color);">
+        <div class="container text-center">
+            <p class="text-muted mb-3">&copy; 2026 DSA Journey. Built with <i class="fas fa-heart text-danger mx-1"></i> by Om Narkhede.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="text-decoration-none text-muted hover-primary transition"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="https://github.com/omn7" class="text-decoration-none text-muted hover-primary transition"><i class="fab fa-github fa-lg"></i></a>
+                <a href="#" class="text-decoration-none text-muted hover-primary transition"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
@@ -577,18 +725,27 @@
             const grid = document.getElementById('problems-grid');
             grid.innerHTML = data.map((problem, index) => `
                 <div class="col-md-6 col-lg-4 animate-in" style="animation-delay: ${index * 0.05}s">
-                    <div class="card problem-card h-100 p-3">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <span class="badge border" style="color: var(--primary-color); background: var(--bg-color);">${problem.category}</span>
-                                <span class="status-badge badge ${problem.status === 'Completed' ? 'bg-success-subtle text-success' : 'bg-warning-subtle text-warning'}">
-                                    ${problem.status === 'Completed' ? '<i class="fas fa-check-circle me-1"></i>Done' : '<i class="fas fa-clock me-1"></i>WIP'}
+                    <div class="card problem-card p-4">
+                        <div class="card-body d-flex flex-column p-0">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge border rounded-pill px-3 py-2 fw-normal" style="color: var(--primary-color); background: var(--bg-color); border-color: var(--primary-color) !important;">
+                                    ${problem.category}
                                 </span>
+                                ${problem.status === 'Completed' ? 
+                                    '<span class="text-success small"><i class="fas fa-check-circle fs-5"></i></span>' : 
+                                    '<span class="text-warning small"><i class="fas fa-hourglass-half fs-5"></i></span>'
+                                }
                             </div>
-                            <h5 class="card-title fw-bold mb-3">${problem.title}</h5>
-                            <div class="mt-auto">
-                                <button class="btn btn-primary w-100 rounded-pill" onclick="viewCode('${problem.file}', '${problem.title}')">
-                                    <i class="fas fa-code me-2"></i>View Solution
+                            
+                            <h5 class="card-title fw-bold mb-2 h4">${problem.title}</h5>
+                            
+                            <p class="card-text text-muted small flex-grow-1" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; height: 4.5em;">
+                                ${problem.theory || 'No description available.'}
+                            </p>
+
+                            <div class="mt-4 pt-3 border-top" style="border-color: var(--border-color) !important;">
+                                <button class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm" onclick="viewCode('${problem.file}', '${problem.title}')">
+                                    View Solution <i class="fas fa-arrow-right ms-2 small"></i>
                                 </button>
                             </div>
                         </div>
@@ -625,22 +782,28 @@
         async function viewCode(filename, title) {
             const modal = new bootstrap.Modal(document.getElementById('codeModal'));
             document.getElementById('modalTitle').textContent = title;
+            document.getElementById('problemTitleLeft').textContent = title; 
+            document.getElementById('fileNameDisplay').textContent = filename; 
             document.getElementById('codeContent').textContent = '// Fetching code from GitHub...';
             document.getElementById('githubLink').href = `https://github.com/omn7/DSA/blob/main/dsa/${filename}`;
             
-            // Set Theory
+            // Find problem details
             const problem = problems.find(p => p.file === filename);
             document.getElementById('theoryContent').textContent = problem && problem.theory 
                 ? problem.theory 
                 : "Detailed theory for this problem is coming soon.";
+            
+            document.getElementById('problemCategory').textContent = problem ? problem.category : 'Algorithm';
 
             // Set Question (if available)
+            const questionContainer = document.getElementById('questionContainer');
             const questionEl = document.getElementById('questionContent');
+            
             if (problem && problem.question) {
                 questionEl.textContent = problem.question;
-                questionEl.classList.remove('d-none');
+                questionContainer.classList.remove('d-none');
             } else {
-                questionEl.classList.add('d-none');
+                questionContainer.classList.add('d-none');
             }
 
             // Set Image
@@ -694,6 +857,52 @@
             const categories = new Set(problems.map(p => p.category)).size;
             document.getElementById('categories-count').textContent = categories;
         }
+    </script>
+    
+    <!-- 3D Animation Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let vantaEffect = null;
+            
+            const initVanta = (theme) => {
+                if(vantaEffect) vantaEffect.destroy();
+
+                const isDark = theme === 'dark';
+                
+                vantaEffect = VANTA.NET({
+                    el: ".hero-section",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    color: 0x6366f1,       // Primary: Indigo-500
+                    backgroundColor: isDark ? 0x000000 : 0x1e1b4b, // Black or Deep Blue
+                    points: 12.00,
+                    maxDistance: 22.00,
+                    spacing: 18.00,
+                    showDots: true
+                });
+            };
+
+            // Init on load
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            initVanta(currentTheme);
+
+            // Hook into theme toggle
+            const themeBtn = document.getElementById('theme-toggle');
+            themeBtn.addEventListener('click', () => {
+                // Wait for the theme to flip in local storage or DOM
+                setTimeout(() => {
+                    const newTheme = document.documentElement.getAttribute('data-theme');
+                    initVanta(newTheme);
+                }, 50);
+            });
+        });
     </script>
 </body>
 </html>
