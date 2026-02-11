@@ -10,6 +10,8 @@ class secondlargestarrayOptimal{
             if(nums[i] > first_largest){
                 second_largest = first_largest;
                 first_largest = nums[i];
+            } else if(nums[i] > second_largest && nums[i] != first_largest){
+                second_largest = nums[i];
             }
         }
         System.out.print(second_largest);
