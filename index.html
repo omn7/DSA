@@ -24,6 +24,12 @@
     <!-- Prism.js for Syntax Highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <style>
+        pre code {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+    <style>
         :root {
             --primary-color: #4f46e5;
             --primary-hover: #4338ca;
@@ -450,6 +456,117 @@
     </style>
 </head>
 <body>
+    <div class="container mt-5">
+        <h2>3Sum Brute</h2>
+        <pre><code class="language-java">import java.util.*;
+
+public class 3sumBrute{
+    public List<List<Integer>> threeSum(int[] nums) {
+        int n = nums.length;
+        List<List<Integer>> store = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    if (nums[i] + nums[j] + nums[k] == 0) {
+                        List<Integer> triplet = Arrays.asList(nums[i], nums[j], nums[k]);
+                        Collections.sort(triplet);
+                        if (!store.contains(triplet)) {
+                            store.add(triplet);
+                        }
+                    }
+                }
+            }
+        }
+        return store;
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] nums = {-1, 0, 1, 2, -1, -4}; // Example input
+        List<List<Integer>> result = sol.threeSum(nums);
+        System.out.println("Triplets that sum to zero: " + result);
+    }
+}
+        </code></pre>
+
+        <h2>3Sum Better</h2>
+        <pre><code class="language-java">import java.util.*;
+
+public class ThreeSumBetter {
+    public List<List<Integer>> threeSum(int[] nums) {
+        Set<List<Integer>> ans = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            Set<Integer> seen = new HashSet<>();   
+            for (int j = i + 1; j < nums.length; j++) {
+                int third = -(nums[i] + nums[j]);
+                if (seen.contains(third)) {
+                    List<Integer> temp = Arrays.asList(nums[i], nums[j], third);
+                    Collections.sort(temp);        
+                    ans.add(temp);
+                }
+                seen.add(nums[j]);               
+            }
+        }
+        return new ArrayList<>(ans);
+    }
+
+    public static void main(String[] args) {
+        ThreeSumBetter sol = new ThreeSumBetter();
+        int[] nums = {-1, 0, 1, 2, -1, -4}; // Example input
+        List<List<Integer>> result = sol.threeSum(nums);
+        System.out.println("Triplets that sum to zero: " + result);
+    }
+}
+        </code></pre>
+
+        <h2>3Sum Optimal</h2>
+        <pre><code class="language-java">import java.util.*;
+
+// LeetCode-style: Implement the threeSum method
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(nums);
+
+        for(int i = 0; i < nums.length-2; i++){
+            if(nums[i] > 0){
+                break;
+            }
+
+            if(i > 0 && nums[i] == nums[i-1]){
+                continue;
+            }
+            
+            int j = i+1, k = nums.length-1; 
+            while(j < k){
+                int sum = nums[i] + nums[j] + nums[k];
+                
+                if (sum < 0){
+                    j++;
+                }
+                else if (sum > 0){
+                    k--;
+                }
+                else{
+                    result.add(Arrays.asList(nums[i], nums[j], nums[k]));
+
+                    while(j < k){
+                        j++;
+                        if(nums[j] != nums[j-1]) break;
+                    }
+
+                    while(j < k){
+                        k--;
+                        if(nums[k] != nums[k+1]) break;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+}
+        </code></pre>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-2">
