@@ -491,6 +491,28 @@
             }
         }
                 </code></pre>
+                <h2>Largest Subarray With 0 Sum - Brute Approach</h2>
+                <pre><code class="language-java">class Solution {
+            int maxLength(int arr[]) {
+                int n = arr.length;
+                int maxLen = 0; 
+                // This will store the answer
+                for(int i = 0; i < n; i++) {
+                    int sum = 0;       // IMPORTANT: Reset sum for every new starting index i
+                    for(int j = i; j < n; j++) {     // Fixed: j < n (not i < n)
+                      sum+= arr[j];
+                      if(sum == 0){
+                          int currL = j-i+1;
+                          if(currL > maxLen){
+                              maxLen = currL;
+                          }
+                      }
+                    }
+                }
+                return maxLen;         // Don't forget to return the result
+            }
+        }
+                </code></pre>
 
                 <h2>4Sum Optimal</h2>
                 <pre><code class="language-java">import java.util.*;
